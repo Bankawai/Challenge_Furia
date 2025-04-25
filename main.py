@@ -8,7 +8,7 @@ bot = telebot.TeleBot('8088561421:AAETwlXktS1mu-iG24GwivP6s5fM97ud_KA')
 @bot.message_handler(['start'])
 def start(msg:telebot.types.Message):
     markup = types.InlineKeyboardMarkup()
-
+#Botões
     botao_esc = types.InlineKeyboardButton('Escalação', callback_data='botao_esc')
     botao_hist = types.InlineKeyboardButton('Histórico', callback_data='botao_hist')
     botao_redes = types.InlineKeyboardButton('Redes sociais', callback_data='botao_redes')
@@ -42,5 +42,5 @@ def resp(call:types.CallbackQuery):
             '\n  TikTok: https://www.tiktok.com/@furiagg \n Linkedin: https://www.linkedin.com/company/furiagg/posts/?feedView=all' \
             '\n Também acesse o site da Furia em furia.gg')
 
-
+#ligar bot
 bot.infinity_polling()
